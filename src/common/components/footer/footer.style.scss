@@ -1,0 +1,22 @@
+@import '../../../assets/scss/variables.scss';
+
+.footer {
+    height: 100px;
+
+    &>.ant-row {
+        height: 100%;
+
+        &>.footerText {
+            font-family: $font-family;
+            font-weight: 300;
+            color: #00000080;
+            margin: 0;
+            padding-left: 70px;
+        }
+
+        &>.footerSpace {
+            background: rgba(89, 130, 149, 0.45) !important;
+
+        }
+    }
+}

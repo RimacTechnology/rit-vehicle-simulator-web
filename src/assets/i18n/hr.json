@@ -1,0 +1,17 @@
+{
+    "login": {
+        "title": "Sign in to RACE",
+        "form":{
+            "email":"E-mail",
+            "password":"Password",
+            "remember":"Remember me",
+            "forgotPassword":"Forgot password?",
+            "submit": "Submit",
+            "quickSignIn": "Quick Sign-In",
+            "noAccount": "Don't have an account?",
+            "register":" Register now",
+            "footer":"Copyright ©2022 Rimac RACE Produced by Team Nevera",
+            "logoAlt":"Rimac logo"
+        }
+    }
+}

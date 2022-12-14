@@ -1,0 +1,21 @@
+@import '../../../assets/scss/variables.scss';
+
+.styledButton {
+    border-radius: 2px;
+    background-color: #0D2E3D;
+    color: white;
+    border: 0;
+    font-family: $font-family;
+    padding: 4px 20px;
+
+    &>span {
+        font-weight: 200 !important;
+    }
+
+    &:hover {
+        color: white !important;
+        background-color: #134157;
+
+    }
+
+}

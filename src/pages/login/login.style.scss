@@ -1,0 +1,110 @@
+@import '../../assets/scss/variables.scss';
+
+.login {
+    .introTitle {
+        font-size: 38px;
+        font-weight: 450;
+        font-family: $font-family;
+        color: $color-main;
+        margin-bottom: 65px;
+    }
+
+    &>.ant-row {
+        &>.loginColumn {
+            background: rgba(89, 130, 149, 0.45);
+            height: 100%;
+            padding: 70px;
+
+            span.ant-input-password,
+            .ant-input {
+                width: 240px !important;
+                background-color: transparent;
+                border: 0;
+                border-bottom: 2px solid #5D7B8A;
+                border-radius: 0px;
+                font-size: 16px;
+                font-family: $font-family;
+                color: $color-main;
+            }
+
+            p,
+            span {
+                font-size: 14px;
+                font-weight: 200;
+                font-family: $font-family;
+                &>a{
+                    color: inherit;
+                    text-decoration: underline;
+                }
+            }
+
+            .ant-input:focus,
+            .ant-input-focused {
+                box-shadow: none !important;
+            }
+
+            .ant-input-affix-wrapper:focus,
+            .ant-input-affix-wrapper-focused {
+                box-shadow: none !important;
+            }
+
+            span.ant-input-password>.ant-input {
+                border: 0;
+            }
+
+            .ant-checkbox,
+            .ant-checkbox-checked,
+            .ant-checkbox-inner {
+                background-color: #0D2E3D !important;
+                border-color: #0D2E3D;
+                border-radius: 2px !important;
+            }
+
+            .ant-checkbox-wrapper {
+                margin-right: 50px;
+                margin-bottom: 25px;
+            }
+
+            .forgotPasswordLink {
+                text-decoration: underline;
+                color: $color-main;
+                font-weight: 300;
+                font-size: 11px;
+
+            }
+
+            button {
+                margin-bottom: 25px;
+            }
+
+            &>.loginContainer {
+                display: flex;
+                flex-direction: column;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+
+                &>.logo {
+                    width: 55px;
+                    height: 68px;
+                }
+
+                &>.form {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                }
+            }
+
+        }
+
+        &>.imageColumn {
+            background: url('../../assets/images/loginBackground.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+
+        }
+    }
+}

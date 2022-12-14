@@ -1,7 +1,21 @@
+@import 'fonts.scss';
+
 //Colors
 $color-main: #112128;
 
 $color-footer: #00000005;
 
 //Fonts
-$font: "Montserat";
+$font-family: "Montserrat";
+
+//Classes
+.w100-h100{
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
