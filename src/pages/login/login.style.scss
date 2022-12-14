@@ -2,7 +2,7 @@
 
 .login {
     .introTitle {
-        font-size: 38px;
+        font-size: 30px;
         font-weight: 450;
         font-family: $font-family;
         color: $color-main;
@@ -32,7 +32,8 @@
                 font-size: 14px;
                 font-weight: 200;
                 font-family: $font-family;
-                &>a{
+
+                &>a {
                     color: inherit;
                     text-decoration: underline;
                 }
@@ -94,8 +95,26 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
+                    .quickSignIn{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        &>p{
+                            margin-right: 15px;
+                        }
+                        &>.anticon>svg {
+                            width: 25px;
+                            height: 25px;
+                            margin-right: 15px;
+                        }
+                    }
+                    
                 }
             }
+
+            
+                
+            
 
         }
 

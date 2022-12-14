@@ -1,9 +1,11 @@
 import { Checkbox, Col, Form, Input, InputRef, Layout, Row } from 'antd'
 import React, { useContext, useEffect, useRef, useState } from 'react'
+import { GoogleCircleFilled, SlackCircleFilled } from '@ant-design/icons';
 import StyledButton from '../../common/components/button/button.component'
 import StyledFooter from '../../common/components/footer/footer.component'
 import AuthContext from '../../common/context/AuthProvider'
 import './login.style.scss'
+import { useQuery, gql } from "@apollo/client";
 
 import logo from '../../assets/images/logo.svg'
 
@@ -18,6 +20,17 @@ function Login() {
     const [remeberMe, setRemeberMe] = useState(false)
     const [errorMsg, setErrorMsg] = useState('')
     const [success, setSuccess] = useState(false)
+
+    const FILMS_QUERY = gql`
+    {
+        launchesPast(limit: 10) {
+        id
+        mission_name
+        }
+    }
+    `;
+
+    const { data, loading, error } = useQuery(FILMS_QUERY);
 
     useEffect(() => {
         if (emailRef.current) { emailRef.current.focus() }
@@ -50,6 +63,20 @@ function Login() {
         }
     }
 
+    if (loading) return <>"Using GraphQL to fetch Loading..."</>;
+    if (error) return <pre>{error.message}</pre>
+
+
+    {
+        console.log("Using GraphQL to fetch data...");
+        
+        data.launchesPast.map((launch: any) => (
+            console.log(launch.mission_name)
+        ))
+    }
+
+
+
     return (
         <div className="login w100-h100 container">
             <Row style={{ height: '100%' }}>
@@ -63,7 +90,7 @@ function Login() {
                                 <Form.Item
                                     name="email"
                                     rules={[{ required: true, message: 'Please input your e-mail address!' }]}
-                                    style={{ marginBottom: '80px' }}
+                                    style={{ marginBottom: '50px' }}
                                 >
                                     <Input
                                         onChange={(e) => { setEmail(e.target.value) }}
@@ -91,9 +118,11 @@ function Login() {
                                     <a className='forgotPasswordLink'>Forgot password?</a>
                                 </div>
                                 <StyledButton submitButton>Submit</StyledButton>
-                                <p>Quick Sign-in:</p>
+                                <div className="quickSignIn">
+                                    <p>Quick Sign-in:</p> <GoogleCircleFilled style={{ color: "#4A626E" }} /> <SlackCircleFilled style={{ color: "#4A626E" }} />
+                                </div>
                                 <p>Don't have an account? <a>Register now</a></p>
-                                <h1>Logged in {auth.email}</h1>
+                                {/* <h1>Logged in {auth.email}</h1> */}
                             </Form>
                         </div>
                     </section>
