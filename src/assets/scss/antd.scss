@@ -1,0 +1,52 @@
+a {
+    font-size: 14px;
+    font-weight: 200;
+    font-family: $font-family;
+    color: white;
+}
+
+.ant-form-item {
+    width: 240px !important;
+}
+
+span.ant-input-password,
+.ant-input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid #5D7B8A;
+    border-radius: 0px;
+    font-size: 16px;
+    font-family: $font-family;
+    color: $color-main;
+}
+
+.ant-input:focus,
+.ant-input-focused {
+    box-shadow: none !important;
+}
+
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused {
+    box-shadow: none !important;
+}
+
+span.ant-input-password>.ant-input {
+    border: 0 !important;
+}
+
+.ant-checkbox,
+.ant-checkbox-checked,
+.ant-checkbox-inner {
+    background-color: #0D2E3D !important;
+    border-color: #0D2E3D;
+    border-radius: 2px !important;
+}
+
+.ant-checkbox-wrapper {
+    margin-right: 50px;
+    margin-bottom: 25px;
+}
+
+.ant-layout-header{
+    height: 48px !important;
+}

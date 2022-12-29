@@ -1,0 +1,36 @@
+{
+    "login": {
+        "title": "Sign in to RACE",
+        "logoAlt": "Rimac logo",
+        "form": {
+            "email": "E-mail",
+            "emailError": "Please input your e-mail!",
+            "password": "Password",
+            "passwordError": "Please input your password!",
+            "remember": "Remember me",
+            "forgotPassword": "Forgot password?",
+            "submit": "Submit",
+            "quickSignIn": "Quick Sign-In",
+            "noAccount": "Don't have an account?",
+            "register": "Register now"
+        }
+    },
+    "register": {
+        "title": "Register to RACE",
+        "form": {
+            "firstName": "First Name",
+            "firstNameError": "Please input your first name!",
+            "lastName": "Last Name",
+            "lastNameError": "Please input your last name!",
+            "emailError": "Please input your e-mail!",
+            "emailValidationError": "The input is not a valid E-mail address!",
+            "weakPassword":"Password is weak",
+            "verifyPassword": "Verify Password",
+            "verifyPasswordError": "Please input your password again!",
+            "verifyPasswordValidationError": "The two passwords that you entered do not match!",
+            "existing": "Already have an account?",
+            "login": "Sign in"
+        }
+    },
+    "footer": "Copyright ©2022 Rimac RACE Produced by Team Nevera"
+}

@@ -1,4 +1,4 @@
-import './button.style.scss'
+import './styledButton.style.scss'
 import { Button } from 'antd'
 
 interface Props {

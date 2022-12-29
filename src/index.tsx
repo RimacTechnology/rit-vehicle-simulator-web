@@ -1,10 +1,11 @@
 import ReactDOM from 'react-dom/client';
-import App from './pages/app/app.component';
 import './assets/scss/index.scss'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthProvider } from './common/context/AuthProvider';
-import Login from './pages/login/login.component';
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+import './common/i18n/i18n';
+import { Account, Dashboard, History, Login, Register } from './pages';
+import { DashboardLayout, HomeLayout } from './common/components';
 
 const client = new ApolloClient({
   uri: "https://api.spacex.land/graphql/",
@@ -19,10 +20,14 @@ root.render(
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/*" element={<App />}>
-            <Route path="login" element={<Login />} />
-            <Route path="register" element={<Login />} />
-            <Route path="dashboard" element={<Login />} />
+          <Route path="/" element={<HomeLayout />}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+          </Route>
+          <Route path="/dashboard" element={<DashboardLayout />}>
+            <Route path="" element={<Dashboard />} />
+            <Route path="/dashboard/history" element={<History />} />
+            <Route path="/dashboard/account" element={<Account />} />
           </Route>
         </Routes>
       </BrowserRouter>
